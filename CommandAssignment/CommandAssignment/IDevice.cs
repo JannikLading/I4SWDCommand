@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandAssignment
 {
-    interface IDevice
+    public interface IDevice
     {
         void TurnOn();
         void TurnOff();

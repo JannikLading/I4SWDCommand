@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 
 namespace CommandAssignment.Commands
 {
-   public class TurnOnCommand: Command
-    {
-        
-        public override void Execute()
+   public class TurnOnCommand: ICommand
+   {
+       private IDevice device; 
+
+        public TurnOnCommand(IDevice dev)
         {
-            
+            device = dev;
+        }
+        
+        public void Execute()
+        {
+            device.TurnOn();
         }
 
-        public override void Undo()
+        public void Undo()
         {
-
+            device.TurnOff();
         }
     }
 }

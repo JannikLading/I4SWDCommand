@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CommandAssignment
 {
-   public abstract class Command
+   public interface ICommand
    {
-       public abstract void Execute();
+       void Execute();
 
-       public abstract void Undo();
+       void Undo();
     }
 }
