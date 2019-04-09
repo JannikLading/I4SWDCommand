@@ -32,7 +32,7 @@ namespace CommandAssignment
         public MainWindow()
         {
             InitializeComponent();
-            _lamp = new Lamp();
+            _lamp = new Lamp(lamplight);
             _lightController = new LightController();
             _togglecommand = new ToggleCommand(_lamp);
             _decreasecommand = new DecreaseCommand(_lamp);

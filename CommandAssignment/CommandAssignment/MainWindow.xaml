@@ -13,6 +13,7 @@
             <RowDefinition Height="141*"/>
         </Grid.RowDefinitions>
         <Polygon 
+                 Name="lamplight"
                  Fill="Yellow"
                  Stroke="Black"
                  StrokeThickness="2" Margin="97,10,0,20.4" 
