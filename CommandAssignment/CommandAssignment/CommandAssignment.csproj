@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IDevice.cs" />
+    <Compile Include="Lamp.cs" />
+    <Compile Include="Commands\TurnOnCommand.cs" />
     <Compile Include="Switch.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

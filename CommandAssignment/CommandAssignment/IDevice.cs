@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CommandAssignment
 {
-   public abstract class Command
-   {
-       public abstract void Execute();
-
-       public abstract void Undo();
+    interface IDevice
+    {
+        void TurnOn();
+        void TurnOff();
+        void Increase();
+        void Decrease();
     }
 }
