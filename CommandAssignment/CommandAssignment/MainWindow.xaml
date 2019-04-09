@@ -26,9 +26,9 @@
         </Polygon>
         <Rectangle Fill="SaddleBrown" HorizontalAlignment="Left" Height="104" Margin="227,211,0,55.4"  StrokeThickness="2" VerticalAlignment="Center" Width="46" Grid.RowSpan="2"/>
         <Rectangle Fill="SaddleBrown" HorizontalAlignment="Left" Height="30" Margin="217,77.4,0,33.4" StrokeThickness="2" VerticalAlignment="Center" Width="66" Grid.Row="1"/>
-        <Button Name="OnOffButton"  Content="On/Off" HorizontalAlignment="Left" Margin="41,30.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" />
-        <Button Name="UpButton" Content="Up" HorizontalAlignment="Left" Margin="41,54.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" />
-        <Button Name="DownButton" Content="Down" HorizontalAlignment="Left" Margin="41,78.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" />
+        <Button Name="OnOffButton"  Content="On/Off" HorizontalAlignment="Left" Margin="41,30.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="OnOffButton_Click" />
+        <Button Name="UpButton" Content="Up" HorizontalAlignment="Left" Margin="41,54.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="UpButton_Click" />
+        <Button Name="DownButton" Content="Down" HorizontalAlignment="Left" Margin="41,78.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="DownButton_Click" />
         <Polygon 
             Name="LampshadePolygon"
             Stroke="Black"
