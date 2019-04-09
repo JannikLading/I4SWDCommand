@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommandAssignment"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="400" Width="400">
+    <Grid Background="#FF626262">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="229*"/>
+            <RowDefinition Height="141*"/>
+        </Grid.RowDefinitions>
+        <Polygon 
+                 Fill="Yellow"
+                 Stroke="Black"
+                 StrokeThickness="2" Margin="97,10,-97.4,20.4" 
+                 Opacity="0.40" Grid.RowSpan="2">
+            <Polygon.Points>
+                <Point X="100" Y="0" />
+                <Point X="200" Y="0" />
+                <Point X="260" Y="200" />
+                <Point X="40" Y="200"/>
+            </Polygon.Points>
+        </Polygon>
+        <Rectangle Fill="SaddleBrown" HorizontalAlignment="Left" Height="104" Margin="227,211,0,55.4"  StrokeThickness="2" VerticalAlignment="Center" Width="46" Grid.RowSpan="2"/>
+        <Rectangle Fill="SaddleBrown" HorizontalAlignment="Left" Height="30" Margin="217,77.4,0,33.4" StrokeThickness="2" VerticalAlignment="Center" Width="66" Grid.Row="1"/>
+        <Button Content="On/Off" HorizontalAlignment="Left" Margin="41,30.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" />
+        <Button Content="Up" HorizontalAlignment="Left" Margin="41,54.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" />
+        <Button Content="Down" HorizontalAlignment="Left" Margin="41,78.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" />
+        <Polygon 
+            Stroke="Black"
+            StrokeThickness="2" Margin="97,10,-97.4,20.4" 
+            Opacity="1" Grid.RowSpan="2">
+            <Polygon.Points>
+                <Point X="100" Y="0" />
+                <Point X="200" Y="0" />
+                <Point X="260" Y="200" />
+                <Point X="40" Y="200"/>
+            </Polygon.Points>
+        </Polygon>
+
     </Grid>
 </Window>
