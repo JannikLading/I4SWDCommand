@@ -55,10 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\DecreaseCommand.cs" />
+    <Compile Include="Commands\IncreaseCommand.cs" />
     <Compile Include="IDevice.cs" />
     <Compile Include="Lamp.cs" />
-    <Compile Include="Commands\TurnOnCommand.cs" />
-    <Compile Include="Switch.cs" />
+    <Compile Include="Commands\ToggleCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,7 +69,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ICommand.cs" />
-    <Compile Include="ISwitch.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

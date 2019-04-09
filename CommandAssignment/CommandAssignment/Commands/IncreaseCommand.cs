@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace CommandAssignment.Commands
 {
-   public class TurnOnCommand: ICommand
-   {
-       private IDevice device; 
+    public class IncreaseCommand : ICommand
+    {
+        private IDevice _device;
 
-        public TurnOnCommand(IDevice dev)
+        public IncreaseCommand(IDevice dev)
         {
-            device = dev;
+            _device = dev;
         }
-        
+
         public void Execute()
         {
-            device.TurnOn();
+            _device.Increase();
         }
 
         public void Undo()
         {
-            device.TurnOff();
+            _device.Decrease();
         }
     }
 }

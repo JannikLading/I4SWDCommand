@@ -15,7 +15,7 @@
         <Polygon 
                  Fill="Yellow"
                  Stroke="Black"
-                 StrokeThickness="2" Margin="97,10,-97.4,20.4" 
+                 StrokeThickness="2" Margin="97,10,0,20.4" 
                  Opacity="0.40" Grid.RowSpan="2">
             <Polygon.Points>
                 <Point X="100" Y="0" />
