@@ -12,6 +12,7 @@ namespace CommandAssignment
     {
         public void TurnOn()
         {
+
             Trace.WriteLine("Lamp On");
         }
 

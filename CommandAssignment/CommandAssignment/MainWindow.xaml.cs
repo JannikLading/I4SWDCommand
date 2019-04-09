@@ -19,40 +19,41 @@ namespace CommandAssignment
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// </summary>S
     public partial class MainWindow : Window
     {
         private IDevice _lamp;
-        private ICommand _command;
+        private ICommand _togglecommand;
+        private ICommand _increasecommand;
+        private ICommand _decreasecommand;
         private LightController _lightController; 
 
 
         public MainWindow()
         {
             InitializeComponent();
-            
             _lamp = new Lamp();
             _lightController = new LightController();
+            _togglecommand = new ToggleCommand(_lamp);
+            _decreasecommand = new DecreaseCommand(_lamp);
+            _increasecommand = new IncreaseCommand(_lamp);
         }
 
         private void OnOffButton_Click(object sender, RoutedEventArgs e)
         {
-            _command = new ToggleCommand(_lamp);
-            _lightController.SetCommand(_command);
+            _lightController.SetCommand(_togglecommand);
             _lightController.ExecuteCommand();
         }
 
         private void UpButton_Click(object sender, RoutedEventArgs e)
         {
-            _command = new IncreaseCommand(_lamp);
-            _lightController.SetCommand(_command);
+            _lightController.SetCommand(_increasecommand);
             _lightController.ExecuteCommand();
         }
 
         private void DownButton_Click(object sender, RoutedEventArgs e)
         {
-            _command = new DecreaseCommand(_lamp);
-            _lightController.SetCommand(_command);
+            _lightController.SetCommand(_decreasecommand);
             _lightController.ExecuteCommand();
         }
     }
