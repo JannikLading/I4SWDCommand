@@ -13,11 +13,24 @@
             <RowDefinition Height="141*"/>
         </Grid.RowDefinitions>
         <Polygon 
+            Name="LampshadePolygon"
+            Stroke="Black"
+            Fill="Azure"
+            StrokeThickness="2" Margin="97,10,-97.4,20.4" 
+            Opacity="1" Grid.RowSpan="2">
+            <Polygon.Points>
+                <Point X="100" Y="0" />
+                <Point X="200" Y="0" />
+                <Point X="260" Y="200" />
+                <Point X="40" Y="200"/>
+            </Polygon.Points>
+        </Polygon>
+        <Polygon 
                  Name="lamplight"
                  Fill="Yellow"
                  Stroke="Black"
                  StrokeThickness="2" Margin="97,10,0,20.4" 
-                 Opacity="0.40" Grid.RowSpan="2">
+                 Opacity="0" Grid.RowSpan="2">
             <Polygon.Points>
                 <Point X="100" Y="0" />
                 <Point X="200" Y="0" />
@@ -30,18 +43,7 @@
         <Button Name="OnOffButton"  Content="On/Off" HorizontalAlignment="Left" Margin="41,30.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="OnOffButton_Click" />
         <Button Name="UpButton" Content="Up" HorizontalAlignment="Left" Margin="41,54.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="UpButton_Click" />
         <Button Name="DownButton" Content="Down" HorizontalAlignment="Left" Margin="41,78.6,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="DownButton_Click" />
-        <Polygon 
-            Name="LampshadePolygon"
-            Stroke="Black"
-            StrokeThickness="2" Margin="97,10,-97.4,20.4" 
-            Opacity="1" Grid.RowSpan="2">
-            <Polygon.Points>
-                <Point X="100" Y="0" />
-                <Point X="200" Y="0" />
-                <Point X="260" Y="200" />
-                <Point X="40" Y="200"/>
-            </Polygon.Points>
-        </Polygon>
+        
 
     </Grid>
 </Window>
