@@ -8,16 +8,21 @@ namespace CommandAssignment
 {
     class LightController
     {
-        private ICommand _command;
-        
-        public void SetCommand(ICommand command)
+        private ICommand[] _commands;
+
+        public LightController(int commands)
         {
-            this._command = command;
+            _commands= new ICommand[commands];
+        }
+        
+        public void SetCommand(int index,ICommand command)
+        {
+            _commands[index] = command;
         }
 
-        public void ExecuteCommand()
+        public void ExecuteCommand(int index)
         {
-            _command.Execute();
+            _commands[index].Execute();
         }
     }
     

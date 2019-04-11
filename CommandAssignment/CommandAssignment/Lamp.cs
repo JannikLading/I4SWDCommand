@@ -53,7 +53,7 @@ namespace CommandAssignment
         {
             if (_state)
             {
-                if (0 < _lamp.Opacity)
+                if (0.25 < _lamp.Opacity)
                 {
                     _lamp.Opacity -= 0.1;
                     Trace.WriteLine("Lamp down");

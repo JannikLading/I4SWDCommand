@@ -33,28 +33,29 @@ namespace CommandAssignment
         {
             InitializeComponent();
             _lamp = new Lamp(lamplight);
-            _lightController = new LightController();
+            _lightController = new LightController(3);
             _togglecommand = new ToggleCommand(_lamp);
             _decreasecommand = new DecreaseCommand(_lamp);
             _increasecommand = new IncreaseCommand(_lamp);
+
+            _lightController.SetCommand(0, _togglecommand);
+            _lightController.SetCommand(1, _increasecommand);
+            _lightController.SetCommand(2, _decreasecommand);
         }
 
         private void OnOffButton_Click(object sender, RoutedEventArgs e)
         {
-            _lightController.SetCommand(_togglecommand);
-            _lightController.ExecuteCommand();
+            _lightController.ExecuteCommand(0);
         }
 
         private void UpButton_Click(object sender, RoutedEventArgs e)
         {
-            _lightController.SetCommand(_increasecommand);
-            _lightController.ExecuteCommand();
+            _lightController.ExecuteCommand(1);
         }
 
         private void DownButton_Click(object sender, RoutedEventArgs e)
         {
-            _lightController.SetCommand(_decreasecommand);
-            _lightController.ExecuteCommand();
+            _lightController.ExecuteCommand(2);
         }
     }
 }
