@@ -8,6 +8,7 @@ namespace CommandAssignment
 {
     public interface IDevice
     {
+        bool GetState();
         void TurnOn();
         void TurnOff();
         void Increase();
