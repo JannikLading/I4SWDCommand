@@ -8,40 +8,34 @@ namespace CommandAssignment.Commands
 {
    public class ToggleCommand: ICommand
    {
-        private IDevice _device;
-        private bool _state; 
+        private IDevice _device; 
 
         public ToggleCommand(IDevice dev)
         {
             _device = dev;
-            _state = false; 
         }
         
         public void Execute()
         {
-            if (!_state)
+            if (!_device.GetState())
             {
                 _device.TurnOn();
-                _state = true;
             }
             else
             {
                 _device.TurnOff();
-                _state = false;
             }
         }
 
         public void Undo()
         {
-            if (_state)
+            if (_device.GetState())
             {
                 _device.TurnOff();
-                _state = false;
             }
             else
             {
                 _device.TurnOn();
-                _state = true;
             }
         }
     }
